@@ -9,7 +9,7 @@ function adicionarAmigo () {
         alert("Por favor, insira um nome válido.");
     } else {
         arrayDeAmigos.push(amigo);
-        console.log(arrayDeAmigos);
+        atualizaListaDeAmigos();
         limparCampo();
     }
 }
@@ -20,5 +20,13 @@ function limparCampo() {
 }
 
 function atualizaListaDeAmigos () {
-    
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML = '';
+
+    for (let i = 0; i < arrayDeAmigos.length; i++) {
+        let nome = arrayDeAmigos[i];
+        let itemDeLista = document.createElement('li');
+        itemDeLista.textContent = nome;
+        lista.appendChild(itemDeLista);
+    }
 }
