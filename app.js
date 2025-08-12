@@ -18,3 +18,7 @@ function limparCampo() {
     amigo = document.querySelector('input');
     amigo.value = "";
 }
+
+function atualizaListaDeAmigos () {
+    
+}
